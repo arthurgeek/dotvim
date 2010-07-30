@@ -60,7 +60,7 @@ set wildmenu
 set wildmode=list:longest
 
 " set color scheme
-colorscheme desert
+colorscheme xoria256
 
 " run the above commands only if vim is compiled with autocmd
 if has("autocmd")
