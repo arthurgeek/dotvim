@@ -29,6 +29,9 @@ set incsearch
 " highlight search
 set hlsearch
 
+" ignore case while searching except if there's an uppercase letter
+set ignorecase smartcase
+
 " indent settings
 set shiftwidth=2 " number of spaces used for (auto)indent
 set expandtab " use soft tabs (spaces)
