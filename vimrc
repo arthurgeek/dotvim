@@ -59,6 +59,9 @@ set statusline+=\ %P " percent through file
 set wildmenu
 set wildmode=list:longest
 
+" automatically create hidden buffers
+set hidden
+
 " set color scheme
 colorscheme xoria256
 
