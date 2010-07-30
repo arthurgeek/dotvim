@@ -62,8 +62,24 @@ set wildmode=list:longest
 " set color scheme
 colorscheme desert
 
-" apply .vimrc settings on save
+" run the above commands only if vim is compiled with autocmd
 if has("autocmd")
-  autocmd bufwritepost .vimrc source $MYVIMRC
+  autocmd BufWritePost .vimrc source $MYVIMRC " apply .vimrc settings on save
+  autocmd BufWritePre *.rb,*.html,*.js,*.py :call <SID>StripTrailingWhitespaces() " remove trailing white spaces before saving (only in specified filetypes)
 endif
+
+" function to remove trailing white space (while saving cursor position)
+" http://vimcasts.org/episodes/tidying-whitespace/
+
+function! <SID>StripTrailingWhitespaces()
+  " Preparation: save last search, and cursor position.
+  let _s=@/
+  let l = line(".")
+  let c = col(".")
+  " Do the business:
+  %s/\s\+$//e
+  " Clean up: restore previous search history, and cursor position
+  let @/=_s
+  call cursor(l, c)
+endfunction
 
