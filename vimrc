@@ -35,6 +35,9 @@ set incsearch
 " highlight matches
 set hlsearch
 
+" show 3 lines of context around the cursor
+set scrolloff=3
+
 " ignore case while searching except if there's an uppercase letter
 set ignorecase smartcase
 
