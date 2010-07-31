@@ -4,6 +4,9 @@ set nocompatible
 " show line numbers
 set number
 
+" don't break wrapped lines on words
+set linebreak
+
 " enable syntax highlight
 syntax on
 
