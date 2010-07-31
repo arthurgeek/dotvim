@@ -4,6 +4,12 @@ set nocompatible
 " show incomplete commands
 set showcmd
 
+" show invisibles
+set list
+
+" use the same symbols as TextMate for tabstops and EOLs
+set listchars=tab:▸\ ,eol:¬
+
 " show line numbers
 set number
 
