@@ -82,6 +82,17 @@ set hidden
 " set color scheme
 colorscheme xoria256
 
+" change leader key
+let mapleader=","
+
+" shortcut for opening files located in the same directory as the current file
+" http://vimcasts.org/episodes/the-edit-command/
+
+map <leader>ew :e <C-R>=expand("%:p:h") . "/" <CR> " open in window
+map <leader>es :sp <C-R>=expand("%:p:h") . "/" <CR> " open in split
+map <leader>ev :vsp <C-R>=expand("%:p:h") . "/" <CR> " open in vertical split
+map <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR> " open in tab
+
 " run the above commands only if vim is compiled with autocmd
 if has("autocmd")
   autocmd BufWritePost .vimrc source $MYVIMRC " apply .vimrc settings on save
