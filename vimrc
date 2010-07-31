@@ -1,5 +1,8 @@
-" do not use vi compatibility mode
+" do not use vi compatibility mode. must come first because it changes other options.
 set nocompatible
+
+" show incomplete commands
+set showcmd
 
 " show line numbers
 set number
@@ -7,17 +10,17 @@ set number
 " don't break wrapped lines on words
 set linebreak
 
-" enable syntax highlight
+" enable syntax highlighting
 syntax on
 
 " auto detect the type of file that is being edited 
 filetype on
-" enable filetype plugin
+" enable file type detection
 filetype plugin on
 " enable filetype-based indentation
 filetype indent on
 
-" allow backspacing over everything on insert mode
+" intuitive backspacing
 set backspace=indent,eol,start
 
 " EOL format
@@ -26,10 +29,10 @@ set fileformats=unix,mac,dos
 " highlight cursor line
 set cursorline
 
-" jump to the search term
+" highlight matches as you type
 set incsearch 
 
-" highlight search
+" highlight matches
 set hlsearch
 
 " ignore case while searching except if there's an uppercase letter
@@ -48,20 +51,26 @@ set history=100
 " backup options
 set backup " turn on backup
 set backupdir=~/.vim/backup " dir to save backup files
-set directory=~/.vim/tmp
+set directory=~/.vim/tmp " dir to keep all swap files
 
-" Make the status line more informative
-set laststatus=2 " always display status line
-set statusline=%<buf:[%n]\ %f\ %h%m%r " buffer, filename, flags
-set statusline+=\ \ [
-set statusline+=%{strlen(&ft)?&ft:'none'} " filetype
-set statusline+=]\ "
-set statusline+=%= " left/right separator 
-set statusline+=\ [%3.(%c%) " cursor column
-set statusline+=\ %-7.(%l/%L%)] " cursor line/total lines
-set statusline+=\ %P " percent through file 
+" Useful status information at bottom of screen
+set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
-" tab navigation
+" enhanced command line completion
+set wildmenu
+" complete files like a shell
+set wildmode=list:longest
+
+" handle multiple buffers better
+set hidden
+
+" set color scheme
+colorscheme xoria256
+
+" change leader key
+let mapleader=","
+
+" tab mappings
 map <D-S-]> gt
 map <D-S-[> gT
 map <D-1> 1gt
@@ -73,20 +82,16 @@ map <D-6> 6gt
 map <D-7> 7gt
 map <D-8> 8gt
 map <D-9> 9gt
-map <D-0> :tablast<CR> 
-
-" bash-like tab completion
-set wildmenu
-set wildmode=list:longest
-
-" automatically create hidden buffers
-set hidden
-
-" set color scheme
-colorscheme xoria256
-
-" change leader key
-let mapleader=","
+map <D-0> :tablast<CR>
+map <leader>tt :tabnew<cr>
+map <leader>te :tabedit
+map <leader>tc :tabclose<cr>
+map <leader>to :tabonly<cr>
+map <leader>tn :tabnext<cr>
+map <leader>tp :tabprevious<cr>
+map <leader>tf :tabfirst<cr>
+map <leader>tl :tablast<cr>
+map <leader>tm :tabmove
 
 " shortcut for opening files located in the same directory as the current file
 " http://vimcasts.org/episodes/the-edit-command/
