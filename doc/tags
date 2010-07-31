@@ -23,6 +23,10 @@
 'Tlist_Use_SingleClick'	taglist.txt	/*'Tlist_Use_SingleClick'*
 'Tlist_WinHeight'	taglist.txt	/*'Tlist_WinHeight'*
 'Tlist_WinWidth'	taglist.txt	/*'Tlist_WinWidth'*
+:Ack	ack.txt	/*:Ack*
+:AckAdd	ack.txt	/*:AckAdd*
+:LAck	ack.txt	/*:LAck*
+:LAckAdd	ack.txt	/*:LAckAdd*
 :MatchDebug	matchit.txt	/*:MatchDebug*
 :TlistAddFiles	taglist.txt	/*:TlistAddFiles*
 :TlistAddFilesRecursive	taglist.txt	/*:TlistAddFilesRecursive*
@@ -47,6 +51,9 @@ Tlist_Set_App()	taglist.txt	/*Tlist_Set_App()*
 Tlist_Update_File_Tags()	taglist.txt	/*Tlist_Update_File_Tags()*
 [%	matchit.txt	/*[%*
 ]%	matchit.txt	/*]%*
+ack	ack.txt	/*ack*
+ack-author	ack.txt	/*ack-author*
+ack.txt	ack.txt	/*ack.txt*
 b:match_col	matchit.txt	/*b:match_col*
 b:match_debug	matchit.txt	/*b:match_debug*
 b:match_ignorecase	matchit.txt	/*b:match_ignorecase*
