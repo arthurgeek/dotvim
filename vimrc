@@ -66,7 +66,7 @@ set directory=~/.vim/tmp " dir to keep all swap files
 set laststatus=2
 
 " Useful status information at bottom of screen
-set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
+set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{GitBranchInfoString()}\ %=%-16(\ %l,%c-%v\ %)%P
 
 " enhanced command line completion
 set wildmenu
