@@ -77,7 +77,7 @@ set wildmode=list:longest
 set hidden
 
 " set color scheme
-colorscheme xoria256
+colorscheme molokai
 
 " minibufexpl settings
 let g:miniBufExplMapWindowNavVim = 1 " use control + [hjkl] to move between buffers
