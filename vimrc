@@ -88,6 +88,9 @@ let mapleader=","
 " save keystrokes, so we don't need to press the Shift key
 nnoremap ; :
 
+" clears the search register
+nmap <silent> <leader>/ :nohlsearch<CR>
+
 " run the above commands only if vim is compiled with autocmd
 if has("autocmd")
   autocmd BufWritePost .vimrc source $MYVIMRC " apply .vimrc settings on save
