@@ -82,11 +82,6 @@ set hidden
 " set color scheme
 colorscheme molokai
 
-" minibufexpl settings
-let g:miniBufExplMapWindowNavVim = 1 " use control + [hjkl] to move between buffers
-let g:miniBufExplMapCTabSwitchBufs = 1 " enable control + tab to move between buffers
-
-
 " change leader key
 let mapleader=","
 
