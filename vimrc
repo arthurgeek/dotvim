@@ -13,6 +13,9 @@ set listchars=tab:▸\ ,eol:¬
 " show line numbers
 set number
 
+" use relative line numbers
+set relativenumber
+
 " don't break wrapped lines on words
 set linebreak
 
