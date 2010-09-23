@@ -91,6 +91,9 @@ nnoremap ; :
 " clears the search register
 nmap <silent> <leader>/ :nohlsearch<CR>
 
+" use sudo to write the file
+cmap w!! w !sudo tee % >/dev/null
+
 " run the above commands only if vim is compiled with autocmd
 if has("autocmd")
   autocmd BufWritePost .vimrc source $MYVIMRC " apply .vimrc settings on save
