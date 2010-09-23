@@ -85,37 +85,6 @@ colorscheme molokai
 " change leader key
 let mapleader=","
 
-" tab mappings
-map <D-S-]> gt
-map <D-S-[> gT
-map <D-1> 1gt
-map <D-2> 2gt
-map <D-3> 3gt
-map <D-4> 4gt
-map <D-5> 5gt
-map <D-6> 6gt
-map <D-7> 7gt
-map <D-8> 8gt
-map <D-9> 9gt
-map <D-0> :tablast<CR>
-map <leader>tt :tabnew<cr>
-map <leader>te :tabedit
-map <leader>tc :tabclose<cr>
-map <leader>to :tabonly<cr>
-map <leader>tn :tabnext<cr>
-map <leader>tp :tabprevious<cr>
-map <leader>tf :tabfirst<cr>
-map <leader>tl :tablast<cr>
-map <leader>tm :tabmove
-
-" shortcut for opening files located in the same directory as the current file
-" http://vimcasts.org/episodes/the-edit-command/
-
-map <leader>ew :e <C-R>=expand("%:p:h") . "/" <CR> " open in window
-map <leader>es :sp <C-R>=expand("%:p:h") . "/" <CR> " open in split
-map <leader>ev :vsp <C-R>=expand("%:p:h") . "/" <CR> " open in vertical split
-map <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR> " open in tab
-
 " run the above commands only if vim is compiled with autocmd
 if has("autocmd")
   autocmd BufWritePost .vimrc source $MYVIMRC " apply .vimrc settings on save
