@@ -88,6 +88,9 @@ let mapleader=","
 " save keystrokes, so we don't need to press the Shift key
 nnoremap ; :
 
+" switch to last used buffer
+nnoremap <leader>l :e#<CR>
+
 " clears the search register
 nmap <silent> <leader>/ :nohlsearch<CR>
 
