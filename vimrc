@@ -153,4 +153,4 @@ function! Wipeout()
 endfunction
 
 " mapping for function above
-map <leader>bw :call Wipeout()<C-R>
+map <leader>bw :call Wipeout()<CR>
