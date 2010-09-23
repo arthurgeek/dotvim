@@ -60,6 +60,10 @@ set smartindent " smart (language based) auto indent
 " keep 100 cmdline history
 set history=100
 
+" persistent undo
+set undofile
+set undodir=~/.vim/tmp
+
 " backup options
 set backup " turn on backup
 set backupdir=~/.vim/backup " dir to save backup files
