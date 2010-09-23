@@ -10,8 +10,9 @@ set encoding=utf-8
 " hide toolbar.
 set guioptions-=T
 
-" don't show right scrollbar
+" don't show scrollbars
 set guioptions-=r
+set guioptions-=l
 
 " make PeepOpen work with Cmd-T
 if has("gui_macvim")
