@@ -86,6 +86,9 @@ set hidden
 " set color scheme
 colorscheme molokai
 
+" enable 256 colors in terminal
+set t_Co=256
+
 " change leader key
 let mapleader=","
 
