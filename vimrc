@@ -98,6 +98,9 @@ nnoremap ; :
 " switch to last used buffer
 nnoremap <leader>l :e#<CR>
 
+" YankRing mapping
+nnoremap <leader>y :YRShow<CR>
+
 " clears the search register
 nmap <silent> <leader>/ :nohlsearch<CR>
 
