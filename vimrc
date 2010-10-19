@@ -104,6 +104,9 @@ nnoremap <leader>y :YRShow<CR>
 " clears the search register
 nmap <silent> <leader>/ :nohlsearch<CR>
 
+" keep window on buffer delete
+nmap <silent> <leader>bd <Plug>Kwbd
+
 " use sudo to write the file
 cmap w!! w !sudo tee % >/dev/null
 
