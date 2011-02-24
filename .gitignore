@@ -1,3 +1,7 @@
 tmp/*
 backup/*
 .netrwhist
+*.log
+*.so
+*.o
+Makefile
