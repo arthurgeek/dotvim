@@ -19,4 +19,6 @@ if has("gui_macvim")
   set guifont=Menlo:h13
   macmenu &File.New\ Tab key=<nop>
   map <D-t> <Plug>PeepOpen
+else
+  set lines=45 columns=130
 end
