@@ -98,6 +98,9 @@ nnoremap <leader>l :e#<CR>
 " YankRing mapping
 nnoremap <leader>y :YRShow<CR>
 
+" YankRing configs
+let g:yankring_history_dir = "~/.vim/tmp"
+
 " clears the search register
 nmap <silent> <leader>/ :nohlsearch<CR>
 
