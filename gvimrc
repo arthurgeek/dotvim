@@ -1,5 +1,5 @@
 " font family and font size.
-set guifont=Dejavu\ Sans\ Mono\ 11
+set guifont=Dejavu\ Sans\ Mono\ 9
 
 " smooth fonts.
 set antialias
