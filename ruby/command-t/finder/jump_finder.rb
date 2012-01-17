@@ -1,4 +1,4 @@
-# Copyright 2010-2011 Wincent Colaiuta. All rights reserved.
+# Copyright 2011 Wincent Colaiuta. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
@@ -21,8 +21,15 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
-require 'command-t/vim'
+require 'command-t/ext' # CommandT::Matcher
+require 'command-t/scanner/jump_scanner'
+require 'command-t/finder'
 
 module CommandT
-  class Scanner; end
+  class JumpFinder < Finder
+    def initialize
+      @scanner = JumpScanner.new
+      @matcher = Matcher.new @scanner, :always_show_dot_files => true
+    end
+  end # class JumpFinder
 end # module CommandT
