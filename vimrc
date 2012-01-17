@@ -16,6 +16,9 @@ set number
 " don't break wrapped lines on words
 set linebreak
 
+" highlight 80 columns
+set cc=80
+
 " enable syntax highlighting
 syntax on
 
