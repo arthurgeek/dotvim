@@ -1,6 +1,6 @@
 " Vim compiler file
-" Language:		Test::Unit - Ruby Unit Testing Framework
-" Maintainer:		Doug Kearns <dougkearns@gmail.com>
+" Language:		RSpec
+" Maintainer:		Tim Pope <vimNOSPAM@tpope.org>
 " URL:			https://github.com/vim-ruby/vim-ruby
 " Anon CVS:		See above site
 " Release Coordinator:	Doug Kearns <dougkearns@gmail.com>
@@ -8,7 +8,7 @@
 if exists("current_compiler")
   finish
 endif
-let current_compiler = "rubyunit"
+let current_compiler = "rspec"
 
 if exists(":CompilerSet") != 2		" older Vim always used :setlocal
   command -nargs=* CompilerSet setlocal <args>
@@ -17,16 +17,16 @@ endif
 let s:cpo_save = &cpo
 set cpo-=C
 
-CompilerSet makeprg=testrb
+CompilerSet makeprg=rspec
 
-CompilerSet errorformat=\%W\ %\\+%\\d%\\+)\ Failure:,
-			\%C%m\ [%f:%l]:,
-			\%E\ %\\+%\\d%\\+)\ Error:,
-			\%C%m:,
-			\%C\ \ \ \ %f:%l:%.%#,
-			\%C%m,
-			\%Z\ %#,
-			\%-G%.%#
+CompilerSet errorformat=
+    \%f:%l:\ %tarning:\ %m,
+    \%E%.%#:in\ `load':\ %f:%l:%m,
+    \%E%f:%l:in\ `%*[^']':\ %m,
+    \%-Z\ \ \ \ \ \#\ %f:%l:%.%#,
+    \%E\ \ %\\d%\\+)%.%#,
+    \%C\ \ \ \ \ %m,
+    \%-G%.%#
 
 let &cpo = s:cpo_save
 unlet s:cpo_save
