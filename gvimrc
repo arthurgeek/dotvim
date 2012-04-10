@@ -10,6 +10,12 @@ set encoding=utf-8
 " hide toolbar.
 set guioptions-=T
 
+" disable errorbells
+set noerrorbells
+
+" disable visualbell
+set visualbell t_vb=
+
 " don't show scrollbars
 set guioptions-=r
 set guioptions-=l
