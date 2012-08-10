@@ -72,6 +72,9 @@ set directory=~/.vim/tmp " dir to keep all swap files
 " show status line all the time
 set laststatus=2
 
+" PowerLine
+let g:Powerline_symbols = 'unicode'
+
 " Useful status information at bottom of screen
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{GitBranchInfoString()}\ %=%-16(\ %l,%c-%v\ %)%P
 
