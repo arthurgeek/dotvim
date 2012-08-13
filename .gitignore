@@ -5,4 +5,5 @@ backup/*
 *.so
 *.o
 *.cache
+*.bundle
 Makefile
