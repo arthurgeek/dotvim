@@ -110,6 +110,9 @@ let g:yankring_history_dir = "~/.vim/tmp"
 " clears the search register
 nmap <silent> <leader>/ :nohlsearch<CR>
 
+" navigate through buffers
+nmap <silent> <leader>be :CommandTBuffer<CR>
+
 " keep window on buffer delete
 nmap <silent> <leader>bd <Plug>Kwbd
 
