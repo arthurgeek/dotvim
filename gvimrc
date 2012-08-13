@@ -1,5 +1,5 @@
 " font family and font size.
-set guifont=Dejavu\ Sans\ Mono\ 9
+set guifont=Dejavu\ Sans\ Mono\ 12
 
 " smooth fonts.
 set antialias
@@ -22,7 +22,7 @@ set guioptions-=l
 
 " make PeepOpen work with Cmd-T
 if has("gui_macvim")
-  set guifont=Menlo:h13
+  set guifont=Menlo:h16
   macmenu &File.New\ Tab key=<nop>
   map <D-t> <Plug>PeepOpen
 else
