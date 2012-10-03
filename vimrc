@@ -22,7 +22,7 @@ set cc=80
 " enable syntax highlighting
 syntax on
 
-" auto detect the type of file that is being edited 
+" auto detect the type of file that is being edited
 filetype on
 " enable file type detection
 filetype plugin on
@@ -82,6 +82,9 @@ set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{GitBranchInfoString()}\ %=%-16(\ %l,
 set wildmenu
 " complete files like a shell
 set wildmode=list:longest
+
+"command-t ignore list
+set wildignore=vendor/**,tmp/**,log/**,coverage/**,solr/data
 
 " handle multiple buffers better
 set hidden
