@@ -116,6 +116,23 @@ nmap <silent> <leader>/ :nohlsearch<CR>
 " navigate through buffers
 nmap <silent> <leader>be :CommandTBuffer<CR>
 
+" run CommandTFlush before opening CommandT
+map <leader>t :CommandTFlush<cr>\|:CommandT<cr>
+
+"Command-T mappings for rails
+map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
+map <leader>gc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
+map <leader>gm :CommandTFlush<cr>\|:CommandT app/models<cr>
+map <leader>gh :CommandTFlush<cr>\|:CommandT app/helpers<cr>
+map <leader>gl :CommandTFlush<cr>\|:CommandT lib<cr>
+map <leader>gp :CommandTFlush<cr>\|:CommandT public<cr>
+
+" open rails routes file
+map <leader>gr :topleft :split config/routes.rb<cr>
+
+" open ruby Gemfile
+map <leader>gg :topleft 100 :split Gemfile<cr>
+
 " keep window on buffer delete
 nmap <silent> <leader>bd <Plug>Kwbd
 
