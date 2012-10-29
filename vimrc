@@ -22,13 +22,6 @@ set cc=80
 " enable syntax highlighting
 syntax on
 
-" auto detect the type of file that is being edited
-filetype on
-" enable file type detection
-filetype plugin on
-" enable filetype-based indentation
-filetype indent on
-
 " intuitive backspacing
 set backspace=indent,eol,start
 
@@ -72,12 +65,6 @@ set directory=~/.vim/tmp " dir to keep all swap files
 " show status line all the time
 set laststatus=2
 
-" PowerLine
-let g:Powerline_symbols = 'fancy'
-
-" Useful status information at bottom of screen
-set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{GitBranchInfoString()}\ %=%-16(\ %l,%c-%v\ %)%P
-
 " enhanced command line completion
 set wildmenu
 " complete files like a shell
@@ -89,11 +76,53 @@ set wildignore=vendor/**,tmp/**,log/**,coverage/**,solr/data
 " handle multiple buffers better
 set hidden
 
+" vundle setup
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+Bundle 'gmarik/vundle'
+
+" vim bundles
+Bundle 'tomasr/molokai'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-fugitive'
+Bundle 'mileszs/ack.vim'
+Bundle 'ecomba/vim-ruby-refactoring'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'msanders/snipmate.vim'
+Bundle 'jnwhiteh/vim-golang'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+Bundle 'vim-scripts/taglist.vim'
+Bundle 'vim-scripts/matchit.zip'
+Bundle 'vim-scripts/AutoComplPop'
+Bundle 'vim-scripts/YankRing.vim'
+Bundle 'vim-scripts/kwbdi.vim'
+Bundle 'vim-scripts/AutoTag'
+Bundle 'vim-scripts/IndexedSearch'
+Bundle 'git://git.wincent.com/command-t.git'
+
+" enable file type detection
+filetype plugin on
+" enable filetype-based indentation
+filetype indent on
+
 " set color scheme
 colorscheme molokai
 
 " enable 256 colors in terminal
 set t_Co=256
+
+" PowerLine
+let g:Powerline_symbols = 'fancy'
+
+" Useful status information at bottom of screen
+" set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{GitBranchInfoString()}\ %=%-16(\ %l,%c-%v\ %)%P
 
 " change leader key
 let mapleader=","

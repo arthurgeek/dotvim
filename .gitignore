@@ -1,9 +1,3 @@
 tmp/*
 backup/*
-.netrwhist
-*.log
-*.so
-*.o
-*.cache
-*.bundle
-Makefile
+bundle/*
