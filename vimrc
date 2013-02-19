@@ -159,6 +159,12 @@ map <leader>gp :CommandTFlush<cr>\|:CommandT public<cr>
 " show tag list
 nnoremap <leader>T :Tlist<CR>
 
+" Disable arrow keys
+noremap <Up> <nop>
+noremap <Down> <nop>
+noremap <Left> <nop>
+noremap <Right> <nop>
+
 " open rails routes file
 map <leader>gr :topleft :split config/routes.rb<cr>
 
