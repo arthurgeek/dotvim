@@ -156,6 +156,9 @@ map <leader>gh :CommandTFlush<cr>\|:CommandT app/helpers<cr>
 map <leader>gl :CommandTFlush<cr>\|:CommandT lib<cr>
 map <leader>gp :CommandTFlush<cr>\|:CommandT public<cr>
 
+" show tag list
+nnoremap <leader>T :Tlist<CR>
+
 " open rails routes file
 map <leader>gr :topleft :split config/routes.rb<cr>
 
