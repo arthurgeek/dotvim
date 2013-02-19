@@ -1,6 +1,6 @@
 # Installation
 
-        $ git clone git://github.com/arthurgeek/dotvim.git
+        $ git clone git://github.com/arthurgeek/dotvim.git ~/.vim
         $ ln -s .vim/vimrc .vimrc
         $ ln -s .vim/gvimrc .gvimrc
 
