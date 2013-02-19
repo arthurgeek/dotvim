@@ -98,7 +98,7 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'msanders/snipmate.vim'
 Bundle 'jnwhiteh/vim-golang'
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/syntastic'
+Bundle 'Syntastic'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'vim-scripts/matchit.zip'
