@@ -100,12 +100,10 @@ Bundle 'jnwhiteh/vim-golang'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'Syntastic'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'vim-scripts/taglist.vim'
 Bundle 'vim-scripts/matchit.zip'
 Bundle 'vim-scripts/AutoComplPop'
 Bundle 'vim-scripts/YankRing.vim'
 Bundle 'vim-scripts/kwbdi.vim'
-Bundle 'vim-scripts/AutoTag'
 Bundle 'vim-scripts/IndexedSearch'
 Bundle 'git://git.wincent.com/command-t.git'
 
