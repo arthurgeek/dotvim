@@ -1,8 +1,8 @@
 # Installation
 
         $ git clone git://github.com/arthurgeek/dotvim.git ~/.vim
-        $ ln -s .vim/vimrc .vimrc
-        $ ln -s .vim/gvimrc .gvimrc
+        $ ln -s .vim/vimrc ~/.vimrc
+        $ ln -s .vim/gvimrc ~/.gvimrc
         $ cd ~/.vim
         $ git submodule init
         $ git submodule update
