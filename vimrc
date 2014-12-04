@@ -108,6 +108,7 @@ Bundle 'vim-scripts/AutoComplPop'
 Bundle 'vim-scripts/YankRing.vim'
 Bundle 'vim-scripts/kwbdi.vim'
 Bundle 'vim-scripts/IndexedSearch'
+Bundle 'elixir-lang/vim-elixir'
 Bundle 'git://git.wincent.com/command-t.git'
 
 " enable file type detection
@@ -188,7 +189,7 @@ cmap w!! w !sudo tee % >/dev/null
 " run the above commands only if vim is compiled with autocmd
 if has("autocmd")
   autocmd BufWritePost .vimrc source $MYVIMRC " apply .vimrc settings on save
-  autocmd BufWritePre *.rb,*.html,*.js,*.py :call <SID>StripTrailingWhitespaces() " remove trailing white spaces before saving (only in specified filetypes)
+  autocmd BufWritePre *.rb,*.html,*.js,*.py,*.ex,*.exs :call <SID>StripTrailingWhitespaces() " remove trailing white spaces before saving (only in specified filetypes)
 endif
 
 " function to remove trailing white space (while saving cursor position)
