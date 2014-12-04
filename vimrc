@@ -109,6 +109,7 @@ Bundle 'vim-scripts/YankRing.vim'
 Bundle 'vim-scripts/kwbdi.vim'
 Bundle 'vim-scripts/IndexedSearch'
 Bundle 'elixir-lang/vim-elixir'
+Bundle 'esneider/YUNOcommit.vim'
 Bundle 'git://git.wincent.com/command-t.git'
 
 " enable file type detection
@@ -125,6 +126,9 @@ set t_Co=256
 " Airline
 let g:airline_powerline_fonts = 1
 let g:airline_theme="luna"
+
+"Y U NO COMMIT
+let g:YUNOcommit_after = 20
 
 " Useful status information at bottom of screen
 " set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{GitBranchInfoString()}\ %=%-16(\ %l,%c-%v\ %)%P
