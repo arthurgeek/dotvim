@@ -76,6 +76,9 @@ set wildignore=vendor/bundle/**,tmp/**,log/**,coverage/**,solr/data
 " handle multiple buffers better
 set hidden
 
+" allow project specific vimrc
+set exrc
+
 " vundle setup
 filetype off
 set rtp+=~/.vim/bundle/vundle/
@@ -281,3 +284,5 @@ map <leader>r :call RunTestFile()<cr>
 map <leader>R :call RunNearestTest()<cr>
 " Run all test files
 map <leader>a :call RunTests('spec')<cr>
+" disable unsafe commands on project specific vimrc
+set secure
