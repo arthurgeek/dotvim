@@ -110,6 +110,7 @@ Bundle 'vim-scripts/kwbdi.vim'
 Bundle 'vim-scripts/IndexedSearch'
 Bundle 'elixir-lang/vim-elixir'
 Bundle 'esneider/YUNOcommit.vim'
+Bundle 'docker/docker', {'rtp': 'contrib/syntax/vim/'}
 Bundle 'git://git.wincent.com/command-t.git'
 
 " enable file type detection
