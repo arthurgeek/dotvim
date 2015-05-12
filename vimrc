@@ -97,6 +97,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'mileszs/ack.vim'
 Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'bling/vim-airline'
+Bundle 'fatih/vim-go'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'msanders/snipmate.vim'
 Bundle 'jnwhiteh/vim-golang'
@@ -195,6 +196,9 @@ cmap w!! w !sudo tee % >/dev/null
 if has("autocmd")
   autocmd BufWritePost .vimrc source $MYVIMRC " apply .vimrc settings on save
   autocmd BufWritePre *.rb,*.html,*.js,*.py,*.ex,*.exs :call <SID>StripTrailingWhitespaces() " remove trailing white spaces before saving (only in specified filetypes)
+
+  " change indentation style for golang
+  autocmd FileType go setlocal noexpandtab shiftwidth=8 softtabstop=8
 endif
 
 " function to remove trailing white space (while saving cursor position)
