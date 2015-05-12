@@ -130,7 +130,7 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme="luna"
 
 "Y U NO COMMIT
-let g:YUNOcommit_after = 20
+let g:YUNOcommit_after = 40
 
 " Useful status information at bottom of screen
 " set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{GitBranchInfoString()}\ %=%-16(\ %l,%c-%v\ %)%P
