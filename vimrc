@@ -110,6 +110,7 @@ Plugin 'vim-scripts/YankRing.vim'
 Plugin 'vim-scripts/kwbdi.vim'
 Plugin 'vim-scripts/IndexedSearch'
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'rust-lang/rust.vim'
 Plugin 'esneider/YUNOcommit.vim'
 Plugin 'docker/docker', {'rtp': 'contrib/syntax/vim/'}
 Plugin 'git://git.wincent.com/command-t.git'
