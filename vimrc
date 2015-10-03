@@ -81,38 +81,41 @@ set exrc
 
 " vundle setup
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#begin()
 
 " let Vundle manage Vundle
-Bundle 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
 " vim bundles
-Bundle 'tomasr/molokai'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-fugitive'
-Bundle 'mileszs/ack.vim'
-Bundle 'ecomba/vim-ruby-refactoring'
-Bundle 'bling/vim-airline'
-Bundle 'fatih/vim-go'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'msanders/snipmate.vim'
-Bundle 'jnwhiteh/vim-golang'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'Syntastic'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'vim-scripts/matchit.zip'
-Bundle 'vim-scripts/AutoComplPop'
-Bundle 'vim-scripts/YankRing.vim'
-Bundle 'vim-scripts/kwbdi.vim'
-Bundle 'vim-scripts/IndexedSearch'
-Bundle 'elixir-lang/vim-elixir'
-Bundle 'esneider/YUNOcommit.vim'
-Bundle 'docker/docker', {'rtp': 'contrib/syntax/vim/'}
-Bundle 'git://git.wincent.com/command-t.git'
+Plugin 'tomasr/molokai'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-fugitive'
+Plugin 'mileszs/ack.vim'
+Plugin 'ecomba/vim-ruby-refactoring'
+Plugin 'bling/vim-airline'
+Plugin 'fatih/vim-go'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'msanders/snipmate.vim'
+Plugin 'jnwhiteh/vim-golang'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'Syntastic'
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plugin 'vim-scripts/matchit.zip'
+Plugin 'vim-scripts/AutoComplPop'
+Plugin 'vim-scripts/YankRing.vim'
+Plugin 'vim-scripts/kwbdi.vim'
+Plugin 'vim-scripts/IndexedSearch'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'esneider/YUNOcommit.vim'
+Plugin 'docker/docker', {'rtp': 'contrib/syntax/vim/'}
+Plugin 'git://git.wincent.com/command-t.git'
+
+" All of your Plugins must be added before the following line
+call vundle#end()
 
 " enable file type detection
 filetype plugin on

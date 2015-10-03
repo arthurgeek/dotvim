@@ -9,7 +9,7 @@
 
 ## Install all plugins
 
-To install plugins, open vim and type `:BundleInstall`.
+To install plugins, open vim and type `:PluginInstall`.
 
 ### Command-T Installation
 
