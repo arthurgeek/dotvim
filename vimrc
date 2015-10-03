@@ -71,7 +71,7 @@ set wildmenu
 set wildmode=list:longest
 
 "command-t ignore list
-set wildignore=vendor/bundle/**,tmp/**,log/**,coverage/**,solr/data
+set wildignore=vendor/bundle/**,tmp/**,log/**,coverage/**,solr/data,_build/**,deps/**
 
 " handle multiple buffers better
 set hidden
