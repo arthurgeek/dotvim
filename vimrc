@@ -116,6 +116,8 @@ Plugin 'vim-scripts/IndexedSearch'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'rust-lang/rust.vim'
 Plugin 'esneider/YUNOcommit.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 Plugin 'docker/docker', {'rtp': 'contrib/syntax/vim/'}
 Plugin 'git://git.wincent.com/command-t.git'
 
@@ -136,6 +138,9 @@ set t_Co=256
 " Airline
 let g:airline_powerline_fonts = 1
 let g:airline_theme="luna"
+
+" enable JSX syntax highlighting and indentation for .js files
+let g:jsx_ext_required = 0
 
 "Y U NO COMMIT
 let g:YUNOcommit_after = 60
@@ -221,6 +226,9 @@ if has("autocmd")
 
   " change indentation style for golang
   autocmd FileType go setlocal noexpandtab shiftwidth=8 softtabstop=8
+
+  " set filetype for json files
+  autocmd BufNewFile,BufRead *.json set ft=json
 endif
 
 " function to remove trailing white space (while saving cursor position)
