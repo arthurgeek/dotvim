@@ -135,6 +135,11 @@ colorscheme molokai
 " enable 256 colors in terminal
 set t_Co=256
 
+" enable true colors if running iTerm
+if $TERM_PROGRAM =~ "iTerm"
+  set termguicolors
+endif
+
 " Airline
 let g:airline_powerline_fonts = 1
 let g:airline_theme="luna"
