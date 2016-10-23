@@ -142,7 +142,7 @@ endif
 
 " Airline
 let g:airline_powerline_fonts = 1
-let g:airline_theme="luna"
+let g:airline_theme="molokai"
 
 " enable JSX syntax highlighting and indentation for .js files
 let g:jsx_ext_required = 0
