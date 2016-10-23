@@ -106,7 +106,7 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'msanders/snipmate.vim'
 Plugin 'jnwhiteh/vim-golang'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'Syntastic'
+Plugin 'neomake/neomake'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'vim-scripts/AutoComplPop'
@@ -158,6 +158,15 @@ nnoremap <leader>y :YRShow<CR>
 " YankRing configs
 let g:yankring_history_dir = "~/.vim/tmp"
 
+let g:neomake_warning_sign = {
+  \ 'text': 'W',
+  \ 'texthl': 'WarningMsg',
+  \ }
+let g:neomake_error_sign = {
+  \ 'text': 'E',
+  \ 'texthl': 'ErrorMsg',
+  \ }
+
 " clears the search register
 nmap <silent> <leader>/ :nohlsearch<CR>
 
@@ -204,6 +213,8 @@ cmap w!! w !sudo tee % >/dev/null
 if has("autocmd")
   autocmd BufWritePost .vimrc source $MYVIMRC " apply .vimrc settings on save
   autocmd BufWritePre *.rb,*.html,*.js,*.py,*.ex,*.exs :call <SID>StripTrailingWhitespaces() " remove trailing white spaces before saving (only in specified filetypes)
+
+  autocmd! BufWritePost,BufEnter * Neomake
 
   " change indentation style for python
   autocmd FileType python setlocal shiftwidth=4 softtabstop=4
