@@ -150,9 +150,6 @@ let g:jsx_ext_required = 0
 "Y U NO COMMIT
 let g:YUNOcommit_after = 60
 
-" Useful status information at bottom of screen
-" set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{GitBranchInfoString()}\ %=%-16(\ %l,%c-%v\ %)%P
-
 " change leader key
 let mapleader=","
 
