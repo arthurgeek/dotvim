@@ -116,6 +116,8 @@ Plugin 'docker/docker', {'rtp': 'contrib/syntax/vim/'}
 Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'ludovicchabant/vim-gutentags'
+Plugin 'c-brenn/phoenix.vim'
+Plugin 'tpope/vim-projectionist' " required by phoenix.vim
 
 " All of your Plugins must be added before the following line
 call vundle#end()
