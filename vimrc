@@ -92,7 +92,6 @@ Plugin 'VundleVim/Vundle.vim'
 
 " vim bundles
 Plugin 'tomasr/molokai'
-Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-surround'
@@ -101,10 +100,8 @@ Plugin 'mileszs/ack.vim'
 Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'fatih/vim-go'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'msanders/snipmate.vim'
-Plugin 'jnwhiteh/vim-golang'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'neomake/neomake'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -113,14 +110,11 @@ Plugin 'vim-scripts/AutoComplPop'
 Plugin 'vim-scripts/YankRing.vim'
 Plugin 'vim-scripts/kwbdi.vim'
 Plugin 'vim-scripts/IndexedSearch'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'rust-lang/rust.vim'
 Plugin 'esneider/YUNOcommit.vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'docker/docker', {'rtp': 'contrib/syntax/vim/'}
 Plugin 'git://git.wincent.com/command-t.git'
+Plugin 'sheerun/vim-polyglot'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
