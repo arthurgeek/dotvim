@@ -118,6 +118,7 @@ Plugin 'sheerun/vim-polyglot'
 Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'c-brenn/phoenix.vim'
 Plugin 'tpope/vim-projectionist' " required by phoenix.vim
+Plugin 'slashmili/alchemist.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -153,6 +154,9 @@ let mapleader=","
 
 " gutentags cache dir
 let g:gutentags_cache_dir = "~/.tags_cache"
+
+" alchemist config
+let g:alchemist_tag_disable = 1
 
 " save keystrokes, so we don't need to press the Shift key
 nnoremap ; :
