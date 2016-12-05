@@ -149,6 +149,9 @@ let g:YUNOcommit_after = 60
 " change leader key
 let mapleader=","
 
+" gutentags cache dir
+let g:gutentags_cache_dir = "~/.tags_cache"
+
 " save keystrokes, so we don't need to press the Shift key
 nnoremap ; :
 
