@@ -118,6 +118,7 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'esneider/YUNOcommit.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'jiangmiao/auto-pairs'
 Plugin 'docker/docker', {'rtp': 'contrib/syntax/vim/'}
 Plugin 'git://git.wincent.com/command-t.git'
 
