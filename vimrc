@@ -73,7 +73,7 @@ set wildmenu
 " complete files like a shell
 set wildmode=list:longest
 
-"command-t ignore list
+" ignore list
 set wildignore=vendor/bundle/**,tmp/**,log/**,coverage/**,solr/data,_build/**,deps/**,node_modules/**
 
 " handle multiple buffers better
@@ -113,7 +113,7 @@ Plugin 'vim-scripts/IndexedSearch'
 Plugin 'esneider/YUNOcommit.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'docker/docker', {'rtp': 'contrib/syntax/vim/'}
-Plugin 'git://git.wincent.com/command-t.git'
+Plugin 'kien/ctrlp.vim'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'c-brenn/phoenix.vim'
@@ -183,21 +183,24 @@ let g:neomake_error_sign = {
 nmap <silent> <leader>/ :nohlsearch<CR>
 
 " navigate through buffers
-nmap <silent> <leader>be :CommandTBuffer<CR>
+nmap <silent> <leader>be :CtrlPBuffer<CR>
 
-" run CommandTFlush before opening CommandT
-map <leader>t :CommandTFlush<cr>\|:CommandT<cr>
+" invoke CtrlPMRU
+nmap <silent> <leader>tm :CtrlPMRU<CR>
 
-"Command-T mappings for rails
-map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
-map <leader>gc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
-map <leader>gm :CommandTFlush<cr>\|:CommandT app/models<cr>
-map <leader>gh :CommandTFlush<cr>\|:CommandT app/helpers<cr>
-map <leader>gl :CommandTFlush<cr>\|:CommandT lib<cr>
-map <leader>gp :CommandTFlush<cr>\|:CommandT public<cr>
+" run CtrlPClearCache before opening CtrlP
+map <leader>t :CtrlPClearCache<cr>\|:CtrlP<cr>
+
+" CtrlP mappings for rails
+map <leader>gv :CtrlPClearCache<cr>\|:CtrlP app/views<cr>
+map <leader>gc :CtrlPClearCache<cr>\|:CtrlP app/controllers<cr>
+map <leader>gm :CtrlPClearCache<cr>\|:CtrlP app/models<cr>
+map <leader>gh :CtrlPClearCache<cr>\|:CtrlP app/helpers<cr>
+map <leader>gl :CtrlPClearCache<cr>\|:CtrlP lib<cr>
+map <leader>gp :CtrlPClearCache<cr>\|:CtrlP public<cr>
 
 " show tag list
-nnoremap <leader>T :Tlist<CR>
+nnoremap <leader>T :CtrlPTag<CR>
 
 " Disable arrow keys
 noremap <Up> <nop>

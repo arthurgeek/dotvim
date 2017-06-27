@@ -11,10 +11,4 @@
 
 To install plugins, open vim and type `:PluginInstall`.
 
-### Command-T Installation
-
-        $ cd ~/.vim/bundle/command-t/ruby/command-t/
-        $ /usr/bin/ruby extconf.rb
-        $ make
-
-That's all!
+That's all! :)
