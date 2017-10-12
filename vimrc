@@ -188,6 +188,9 @@ nmap <silent> <leader>be :CtrlPBuffer<CR>
 " invoke CtrlPMRU
 nmap <silent> <leader>tm :CtrlPMRU<CR>
 
+" tell CtrlP to ignore files on .gitignore
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
 " run CtrlPClearCache before opening CtrlP
 map <leader>t :CtrlPClearCache<cr>\|:CtrlP<cr>
 
