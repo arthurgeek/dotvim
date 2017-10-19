@@ -125,6 +125,7 @@ Plugin 'guns/vim-clojure-static'
 Plugin 'tpope/vim-fireplace'
 Plugin 'bhurlow/vim-parinfer'
 Plugin 'junegunn/fzf.vim'
+Plugin 'airblade/vim-gitgutter'
 
 " fzf vim extensions
 set rtp+=/usr/local/opt/fzf
@@ -203,6 +204,12 @@ map <leader>rm :Files app/models<cr>
 map <leader>rh :Files app/helpers<cr>
 map <leader>rl :Files lib<cr>
 map <leader>rp :Files public<cr>
+
+" GitGutter styling to use · instead of +/-
+let g:gitgutter_sign_added = '∙'
+let g:gitgutter_sign_modified = '∙'
+let g:gitgutter_sign_removed = '∙'
+let g:gitgutter_sign_modified_removed = '∙'
 
 " Disable arrow keys
 noremap <Up> <nop>
