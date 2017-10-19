@@ -221,6 +221,10 @@ inoremap <Down> <nop>
 inoremap <Left> <nop>
 inoremap <Right> <nop>
 
+" map paste/nopaste
+map <leader>sp :set paste<cr>
+map <leader>snp :set nopaste<cr>
+
 " open rails routes file
 map <leader>gr :topleft :split config/routes.rb<cr>
 
