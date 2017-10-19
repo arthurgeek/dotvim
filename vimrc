@@ -122,6 +122,9 @@ Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'c-brenn/phoenix.vim'
 Plugin 'tpope/vim-projectionist' " required by phoenix.vim
 Plugin 'slashmili/alchemist.vim'
+Plugin 'guns/vim-clojure-static'
+Plugin 'tpope/vim-fireplace'
+Plugin 'bhurlow/vim-parinfer'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
