@@ -7,6 +7,7 @@
         $ git submodule init
         $ git submodule update
         $ brew install fzf
+        $ brew install ag
 
 ## Install all plugins
 

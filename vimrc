@@ -205,6 +205,9 @@ map <leader>rh :Files app/helpers<cr>
 map <leader>rl :Files lib<cr>
 map <leader>rp :Files public<cr>
 
+" Tell ack.vim to use ag (the Silver Searcher) instead
+let g:ackprg = 'ag --vimgrep'
+
 " GitGutter styling to use · instead of +/-
 let g:gitgutter_sign_added = '∙'
 let g:gitgutter_sign_modified = '∙'
