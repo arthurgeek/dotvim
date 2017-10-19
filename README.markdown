@@ -6,6 +6,7 @@
         $ cd ~/.vim
         $ git submodule init
         $ git submodule update
+        $ brew install fzf
 
 ## Install all plugins
 

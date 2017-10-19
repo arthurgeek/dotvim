@@ -116,7 +116,6 @@ Plugin 'vim-scripts/IndexedSearch'
 Plugin 'esneider/YUNOcommit.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'docker/docker', {'rtp': 'contrib/syntax/vim/'}
-Plugin 'kien/ctrlp.vim'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'c-brenn/phoenix.vim'
@@ -125,6 +124,10 @@ Plugin 'slashmili/alchemist.vim'
 Plugin 'guns/vim-clojure-static'
 Plugin 'tpope/vim-fireplace'
 Plugin 'bhurlow/vim-parinfer'
+Plugin 'junegunn/fzf.vim'
+
+" fzf vim extensions
+set rtp+=/usr/local/opt/fzf
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -188,28 +191,18 @@ let g:neomake_error_sign = {
 " clears the search register
 nmap <silent> <leader>/ :nohlsearch<CR>
 
-" navigate through buffers
-nmap <silent> <leader>be :CtrlPBuffer<CR>
+" FZF generic mappings
+nmap <silent> <leader>be :Buffers<CR> " navigate through buffers
+map <leader>t :Files<CR> " show file list
+nnoremap <leader>T :Tags<CR> " show tag list
 
-" invoke CtrlPMRU
-nmap <silent> <leader>r :CtrlPMRU<CR>
-
-" tell CtrlP to ignore files on .gitignore
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-
-" run CtrlPClearCache before opening CtrlP
-map <leader>t :CtrlPClearCache<cr>\|:CtrlP<cr>
-
-" CtrlP mappings for rails
-map <leader>gv :CtrlPClearCache<cr>\|:CtrlP app/views<cr>
-map <leader>gc :CtrlPClearCache<cr>\|:CtrlP app/controllers<cr>
-map <leader>gm :CtrlPClearCache<cr>\|:CtrlP app/models<cr>
-map <leader>gh :CtrlPClearCache<cr>\|:CtrlP app/helpers<cr>
-map <leader>gl :CtrlPClearCache<cr>\|:CtrlP lib<cr>
-map <leader>gp :CtrlPClearCache<cr>\|:CtrlP public<cr>
-
-" show tag list
-nnoremap <leader>T :CtrlPTag<CR>
+" FZF mappings for rails
+map <leader>rv :Files app/views<cr>
+map <leader>rc :Files app/controllers<cr>
+map <leader>rm :Files app/models<cr>
+map <leader>rh :Files app/helpers<cr>
+map <leader>rl :Files lib<cr>
+map <leader>rp :Files public<cr>
 
 " Disable arrow keys
 noremap <Up> <nop>
