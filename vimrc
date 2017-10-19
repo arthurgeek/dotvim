@@ -247,6 +247,9 @@ if has("autocmd")
   " change indentation style for python
   autocmd FileType python setlocal shiftwidth=4 softtabstop=4
 
+  " make a copy of the file and overwrite the original crontab file
+  autocmd FileType crontab setlocal bkc=yes
+
   " change indentation style for golang
   autocmd FileType go setlocal noexpandtab shiftwidth=8 softtabstop=8
 
