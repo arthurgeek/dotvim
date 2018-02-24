@@ -126,6 +126,7 @@ Plugin 'tpope/vim-fireplace'
 Plugin 'bhurlow/vim-parinfer'
 Plugin 'junegunn/fzf.vim'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'thoughtbot/vim-rspec'
 Plugin 'valloric/youcompleteme'
 
 " fzf vim extensions
@@ -174,6 +175,15 @@ nnoremap ; :
 
 " switch to last used buffer
 nnoremap <leader>l :e#<CR>
+
+" RSpec.vim command
+let g:rspec_command = "!bundle exec rspec --drb {spec}"
+
+" RSpec.vim mappings
+map <Leader>r :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>m :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
 
 " YankRing mapping
 nnoremap <leader>y :YRShow<CR>
