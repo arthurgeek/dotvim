@@ -128,6 +128,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'valloric/youcompleteme'
+Plugin 'rust-lang/rust.vim'
 
 " fzf vim extensions
 set rtp+=/usr/local/opt/fzf
