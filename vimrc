@@ -110,7 +110,6 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'neomake/neomake'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'vim-scripts/matchit.zip'
-Plugin 'vim-scripts/AutoComplPop'
 Plugin 'vim-scripts/YankRing.vim'
 Plugin 'vim-scripts/kwbdi.vim'
 Plugin 'vim-scripts/IndexedSearch'
@@ -127,6 +126,7 @@ Plugin 'tpope/vim-fireplace'
 Plugin 'bhurlow/vim-parinfer'
 Plugin 'junegunn/fzf.vim'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'valloric/youcompleteme'
 
 " fzf vim extensions
 set rtp+=/usr/local/opt/fzf
