@@ -171,6 +171,9 @@ let g:gutentags_cache_dir = "~/.tags_cache"
 " alchemist config
 let g:alchemist_tag_disable = 1
 
+" auto-pairs shortcuts
+let g:AutoPairsShortcutFastWrap = '<C-e>'
+
 " save keystrokes, so we don't need to press the Shift key
 nnoremap ; :
 
