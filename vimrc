@@ -35,7 +35,7 @@ set fileformats=unix,mac,dos
 set cursorline
 
 " highlight matches as you type
-set incsearch 
+set incsearch
 
 " highlight matches
 set hlsearch
@@ -51,7 +51,7 @@ set shiftwidth=2 " number of spaces used for (auto)indent
 set expandtab " use soft tabs (spaces)
 set softtabstop=2 " size of soft tabs
 set autoindent " auto indent lines
-set smartindent " smart (language based) auto indent 
+set smartindent " smart (language based) auto indent
 
 " keep 100 cmdline history
 set history=100
@@ -82,59 +82,59 @@ set hidden
 " allow project specific vimrc
 set exrc
 
-" vundle setup
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#begin()
+" auto install plug.vim
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-" let Vundle manage Vundle
-Plugin 'VundleVim/Vundle.vim'
+" plug.vim setup
+call plug#begin('~/.vim/plugged')
 
 " vim bundles
-Plugin 'tomasr/molokai'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-rhubarb'
-Plugin 'mileszs/ack.vim'
-Plugin 'ecomba/vim-ruby-refactoring'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'honza/vim-snippets'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'neomake/neomake'
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-Plugin 'vim-scripts/matchit.zip'
-Plugin 'vim-scripts/YankRing.vim'
-Plugin 'vim-scripts/kwbdi.vim'
-Plugin 'vim-scripts/IndexedSearch'
-Plugin 'esneider/YUNOcommit.vim'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'docker/docker', {'rtp': 'contrib/syntax/vim/'}
-Plugin 'sheerun/vim-polyglot'
-Plugin 'ludovicchabant/vim-gutentags'
-Plugin 'c-brenn/phoenix.vim'
-Plugin 'tpope/vim-projectionist' " required by phoenix.vim
-Plugin 'slashmili/alchemist.vim'
-Plugin 'guns/vim-clojure-static'
-Plugin 'tpope/vim-fireplace'
-Plugin 'bhurlow/vim-parinfer'
-Plugin 'junegunn/fzf.vim'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'thoughtbot/vim-rspec'
-Plugin 'valloric/youcompleteme'
-Plugin 'rust-lang/rust.vim'
+Plug 'tomasr/molokai'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+Plug 'mileszs/ack.vim'
+Plug 'ecomba/vim-ruby-refactoring'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
+Plug 'scrooloose/nerdcommenter'
+Plug 'neomake/neomake'
+Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plug 'vim-scripts/matchit.zip'
+Plug 'vim-scripts/YankRing.vim'
+Plug 'vim-scripts/kwbdi.vim'
+Plug 'vim-scripts/IndexedSearch'
+Plug 'esneider/YUNOcommit.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'docker/docker', {'rtp': 'contrib/syntax/vim/'}
+Plug 'sheerun/vim-polyglot'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'c-brenn/phoenix.vim'
+Plug 'tpope/vim-projectionist' " required by phoenix.vim
+Plug 'slashmili/alchemist.vim'
+Plug 'guns/vim-clojure-static'
+Plug 'tpope/vim-fireplace'
+Plug 'bhurlow/vim-parinfer'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'airblade/vim-gitgutter'
+Plug 'thoughtbot/vim-rspec'
+Plug 'valloric/youcompleteme', { 'do': './install.py' }
+Plug 'rust-lang/rust.vim'
 
-" fzf vim extensions
-set rtp+=/usr/local/opt/fzf
-
+" Initialize plugin system
 " All of your Plugins must be added before the following line
-call vundle#end()
+call plug#end()
 
 " enable file type detection
 filetype plugin on

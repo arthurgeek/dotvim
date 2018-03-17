@@ -4,13 +4,10 @@
         $ ln -s .vim/vimrc ~/.vimrc
         $ ln -s .vim/gvimrc ~/.gvimrc
         $ cd ~/.vim
-        $ git submodule init
-        $ git submodule update
-        $ brew install fzf
         $ brew install ag
 
 ## Install all plugins
 
-To install plugins, open vim and type `:PluginInstall`.
+To install plugins, open vim and type `:PlugInstall`.
 
 That's all! :)

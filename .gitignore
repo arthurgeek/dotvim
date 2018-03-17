@@ -1,3 +1,4 @@
 tmp/*
 backup/*
-bundle/*
+autoload/plug.vim
+plugged/*
